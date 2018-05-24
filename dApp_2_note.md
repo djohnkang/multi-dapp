@@ -77,14 +77,14 @@
      
      contract Note {
      
-         string public message;
+         string public note;
          
-         function Note(string initialMessage) public {
-             message = initialMessage;    
+         function Note(string _input) public {
+             note = _input;    
          }
          
-         function setMessage(string newMessage) public {
-             message = newMessage;
+         function writeNote(string _input) public {
+             note = _input;
          }    
      }
      ```
@@ -208,7 +208,7 @@
       });
       
       describe('Note', () => {
-          it('deployts a contract', () => {});
+          it('deploys a contract', () => {});
       });
       ```
 
@@ -223,7 +223,7 @@
       
       // Constructor function 을 사용할 예정이기 때문에 'W'eb3
       const Web3 = require('web3');
-      // instance 이기 때문에 'w'eb3
+      // instance 이기 때문에 'web3'
       const web3 = new Web3(ganache.provider());
       const { interface, bytecode } = require('../compile');
       
@@ -239,7 +239,7 @@
       });
       
       describe('Note', () => {
-          it('deployts a contract', () => {
+          it('deploys a contract', () => {
               console.log(note);
           });
       });
@@ -269,20 +269,20 @@
       });
       
       describe('Note', () => {
-          it('deployts a contract', () => {
+          it('deploys a contract', () => {
               assert.ok(note.options.address);
           });
       
-          it('has a default message', async () => {
-              // message() 와 call() 에 주의
-              const message = await note.methods.message().call();
-              assert.equal(message, 'Hack Your Life')
+          it('has a default note', async () => {
+              // note() 와 call() 에 주의
+              const note = await note.methods.note().call();
+              assert.equal(note, 'Hack Your Life')
           });
       
-          it('can change the message', async () => {
-              await note.methods.setMessage('bye').send({ from: accounts[0] });
-              const message = await note.methods.message().call();
-              assert.equal(message, 'bye');
+          it('can change the note', async () => {
+              await note.methods.writeNote('bye').send({ from: accounts[0] });
+              const note = await note.methods.note().call();
+              assert.equal(note, 'bye');
           });
       });
       ```
@@ -323,7 +323,7 @@
               .deploy({ data: '0x' + bytecode, arguments: ['Hi there!'] })
               .send({ from: accounts[0], gas: '1000000', gasPrice: web3.utils.toWei('2', 'gwei') });
       
-        console.log('Contract deployted to', result.options.address);  
+        console.log('Contract deployed to', result.options.address);  
       };
       
       deploy(); 
@@ -331,7 +331,7 @@
 
       ```shell
       Attempting to deploy from account [acoount_address]
-      Contract deployted to [contrcat_address]
+      Contract deployed to [contrcat_address]
       ```
 
       * Console 에 Contract Address 가 나타난다면, https://rinkeby.etherscan.io/address/[contract_address] 를 입력하고 실제 배포되었는지 확인해보자.
