@@ -1,4 +1,5 @@
 # 실전 dApp 강의 - note
+블록체인에 기록하는 Note DApp
 
 ## Contract Deployment (Contract 배포)
 
