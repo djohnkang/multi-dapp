@@ -22,7 +22,7 @@ Translated, edited, and written by
   - https://github.com/llSourcell/IPFS_Ethereum_Storage
 - [theschool.ai](http://theschool.ai)
 - Stephen Grider [StephenGrider](https://github.com/StephenGrider)
-  - [ethereum and solidity the complete developer's guide]('https://www.udemy.com/ethereum-and-solidity-the-complete-developers-guide/learn/v4/t/lecture/9025578?start=1')
+  - [ethereum and solidity the complete developer's guide](https://www.udemy.com/ethereum-and-solidity-the-complete-developers-guide/learn/v4/t/lecture/9025578?start=1)
 
 ## License
 Under the [MIT License](https://opensource.org/licenses/MIT).

@@ -14,8 +14,6 @@ Ethereum과 Interaction하는 방법들
 * 모든 Ethereum Node는 완전한 연속된 블록들(**Blockchain**)을 복사해서 저장한다.
 * **Blockchain**은 일어난 모든 거래(transaction)들의 레코드를 저장한 **DB** 이다.
 
-### 결론: Blockchain == DB
-
 
 ## Etherium Network 사용하기.
 
