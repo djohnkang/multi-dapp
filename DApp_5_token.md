@@ -105,3 +105,15 @@ npm run dev
 - 두번째 계정에 보내기
 - Ganache에서 Transaction 확인
 - 두번째 계정에서 확인
+
+## Authors
+Translated, edited, and written by
+- 강동주 [@djohnkang]('https://github.com/djohnkang')
+- 유태영 [@neovansoarer]('https://github.com/neovansoarer')
+- 오창희 [@5chang2]('https://github.com/5chang2')
+
+## Acknowledgement
+- [Truffle Tutorial + Open Zeppelin]('http://truffleframework.com/tutorials/robust-smart-contracts-with-openzeppelin')
+
+## License
+Under the [MIT License](https://opensource.org/licenses/MIT).

@@ -1,4 +1,5 @@
-# 실전 dApp 강의 - Lottery
+# 실전 DApp 강의 - Lottery
+이더리움 기반의 Game DApp
 
 ## The Lottery Contract
 
@@ -790,3 +791,16 @@
        });
    });
    ```
+
+## Authors
+Translated, edited, and written by
+- 강동주 [@djohnkang]('https://github.com/djohnkang')
+- 유태영 [@neovansoarer]('https://github.com/neovansoarer')
+- 오창희 [@5chang2]('https://github.com/5chang2')
+
+## Acknowledgement
+- Stephen Grider [@StephenGrider]('https://github.com/StephenGrider')
+ - [ethereum and solidity the complete developer's guide]('https://www.udemy.com/ethereum-and-solidity-the-complete-developers-guide/learn/v4/t/lecture/9025578?start=1')
+
+## License
+Under the [MIT License](https://opensource.org/licenses/MIT).

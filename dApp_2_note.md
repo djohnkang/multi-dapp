@@ -1,4 +1,4 @@
-# 실전 dApp 강의 - note
+# 실전 DApp 강의 - note
 블록체인에 기록하는 Note DApp
 
 ## Contract Deployment (Contract 배포)
@@ -336,3 +336,16 @@
       ```
 
       * Console 에 Contract Address 가 나타난다면, https://rinkeby.etherscan.io/address/[contract_address] 를 입력하고 실제 배포되었는지 확인해보자.
+
+## Authors
+Translated, edited, and written by
+- 강동주 [@djohnkang]('https://github.com/djohnkang')
+- 유태영 [@neovansoarer]('https://github.com/neovansoarer')
+- 오창희 [@5chang2]('https://github.com/5chang2')
+
+## Acknowledgement
+- Stephen Grider [@StephenGrider]('https://github.com/StephenGrider')
+  - [ethereum and solidity the complete developer's guide]('https://www.udemy.com/ethereum-and-solidity-the-complete-developers-guide/learn/v4/t/lecture/9025578?start=1')
+
+## License
+Under the [MIT License](https://opensource.org/licenses/MIT).

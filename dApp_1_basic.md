@@ -1,11 +1,11 @@
-# 실전 dApp 강의 - basic
+# 실전 DApp 강의 - basic
 Ethereum과 Interaction하는 방법들
 
 ## Ethereum 이란 무엇인가.
 
 * Ethereum 네트워크는 돈을 전송하고, 그 데이터를 저장한다.
-* 세상에는 엄청나게 많은 Ethereum 네트워크가 존재한다. 
-  * 메인 네트워크가 존재하지만, 따로 존재하는 많은 네트워크가 존재. 
+* 세상에는 엄청나게 많은 Ethereum 네트워크가 존재한다.
+  * 메인 네트워크가 존재하지만, 따로 존재하는 많은 네트워크가 존재.
   * 강의 진행중에 우리도 작은 네트워크를 만들어 볼 예정
 * Ethereum 네트워크는 한개 혹은 이상의 Node 로 이루어져 있다.
 * 여기서 Node 는 Ethereum 클라이언트를 실행하는 모든 종류의 컴퓨터를 의미한다.
@@ -95,17 +95,17 @@ contract Note {
 
 	// Contract 에서 존재할 모든 Instance 변수를 선언. (Staorage Variable)
     string public message;
-    
+
     // contract 이름과 같음 = 생성자 function
     function Note(string initialMessage) public {
         message = initialMessage;
-        
+
     }
-    
+
     function setNote(string newMessage) public {
         message = newMessage;
     }
-    
+
     // getMessage() => function name | public view => function type | return 할 대상의 type
     // 사실 Starage Variable 은 생성되는 순간 변수 이름과 같은 return function 이 생성됨.
     // 아래 function 은 이미 존재하는 function 을 굳이 또 적은것.
@@ -171,15 +171,15 @@ pragma solidity ^0.4.17;
 contract Note {
 
     string public message;
-    
+
     function Note(string initialMessage) public {
         message = initialMessage;    
     }
-    
+
     function setMessage(string newMessage) public {
         message = newMessage;
     }
-    
+
     function doMath(int a, int b) {
     		   // 필요한 Gas
         a + b;  // 3
@@ -187,7 +187,7 @@ contract Note {
         a * b;  // 5
         a == 0; // 3
     }
-    
+
 }
 ```
 
@@ -198,3 +198,16 @@ contract Note {
 * 반드시 저장할 것.
 * https://iancoleman.io/bip39/
   * 위 주소에 mnemonic phrases 를 입력하고, 코인을 Ethereum 으로 바꾸면 아래 Derived Addresses 에 본인 계정들이 나온다. 현재 default 계정의 Address 와 표시된 첫 번째 Address 를 확인.
+
+## Authors
+Translated, edited, and written by
+- 강동주 [@djohnkang]('https://github.com/djohnkang')
+- 유태영 [@neovansoarer]('https://github.com/neovansoarer')
+- 오창희 [@5chang2]('https://github.com/5chang2')
+
+## Acknowledgement
+- Stephen Grider [@StephenGrider]('https://github.com/StephenGrider')
+  - [ethereum and solidity the complete developer's guide]('https://www.udemy.com/ethereum-and-solidity-the-complete-developers-guide/learn/v4/t/lecture/9025578?start=1')
+
+## License
+Under the [MIT License](https://opensource.org/licenses/MIT).
