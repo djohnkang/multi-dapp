@@ -8,7 +8,7 @@
 - [Crowdfund DApp](DApp_4_crowdfund.md)
 - [Truffle + ERC20 token 발행하기](DApp_5_token.md)
 - [Whisper + chatt DApp](Whisper_chat.md)
-- [IPFS + news DApp](IPFS_storage)
+- [IPFS + news DApp](IPFS_storage.md)
 
 ## Authors
 Translated, edited, and written by
