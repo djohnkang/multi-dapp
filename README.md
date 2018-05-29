@@ -2,13 +2,13 @@
 강동주 [@djohnkang]('https://github.com/djohnkang')
 
 ## Contents
-- [Ethereum 및 DApp 기초 + Solidity + Remix]('./DApp_1_basic.md')
-- [Note DApp + web3.js]('./DApp_2_note.md')
-- [Lottery DApp + testing]('./DApp_3_lottery.md')
-- [Crowdfund DApp]('./DApp_4_crowdfund.md')
-- [Truffle + ERC20 token 발행하기]('./DApp_5_token.md')
-- [Whisper + chatt DApp]('./Whisper_chat.md')
-- [IPFS + news DApp]('./IPFS_storage')
+- [Ethereum 및 DApp 기초 + Solidity + Remix]('DApp_1_basic.md')
+- [Note DApp + web3.js]('DApp_2_note.md')
+- [Lottery DApp + testing]('DApp_3_lottery.md')
+- [Crowdfund DApp]('DApp_4_crowdfund.md')
+- [Truffle + ERC20 token 발행하기]('DApp_5_token.md')
+- [Whisper + chatt DApp]('Whisper_chat.md')
+- [IPFS + news DApp]('IPFS_storage')
 
 ## Authors
 Translated, edited, and written by
