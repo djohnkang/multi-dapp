@@ -108,12 +108,12 @@ npm run dev
 
 ## Authors
 Translated, edited, and written by
-- 강동주 [@djohnkang]['https://github.com/djohnkang']
-- 유태영 [@neovansoarer]['https://github.com/neovansoarer']
-- 오창희 [@5chang2]['https://github.com/5chang2']
+- 강동주 [@djohnkang]('https://github.com/djohnkang')
+- 유태영 [@neovansoarer]('https://github.com/neovansoarer')
+- 오창희 [@5chang2]('https://github.com/5chang2')
 
 ## Acknowledgement
-- [Truffle Tutorial + Open Zeppelin]['http://truffleframework.com/tutorials/robust-smart-contracts-with-openzeppelin']
+- [Truffle Tutorial + Open Zeppelin]('http://truffleframework.com/tutorials/robust-smart-contracts-with-openzeppelin')
 
 ## License
-Under the [MIT License][https://opensource.org/licenses/MIT].
+Under the [MIT License](https://opensource.org/licenses/MIT).
