@@ -117,14 +117,14 @@
 
 ## Authors
 Translated, edited, and written by
-- 강동주 [@djohnkang]('https://github.com/djohnkang')
-- 유태영 [@neovansoarer]('https://github.com/neovansoarer')
-- 오창희 [@5chang2]('https://github.com/5chang2')
+- 강동주 [djohnkang](https://github.com/djohnkang)
+- 유태영 [neovansoarer](https://github.com/neovansoarer)
+- 오창희 [5chang2](https://github.com/5chang2)
 
 ## Sources
-- Siraj Raval [llSourcell]('https://github.com/llSourcell')
+- Siraj Raval [llSourcell](https://github.com/llSourcell)
   - https://github.com/llSourcell/Decentralized_Chat
-- [theschool.ai]('http://theschool.ai')
+- [theschool.ai](http://theschool.ai)
 
 ## License
 Under the [MIT License](https://opensource.org/licenses/MIT).
