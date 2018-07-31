@@ -36,8 +36,8 @@
 ```
 
 ### 3. `Git` 설치
--
--
+- VCS(버전관리도구)
+- 개발을 위해 필수적인 도구
 
 ```shell
 > choco install git -y
@@ -46,8 +46,8 @@ git version 2.17.0.windows.1
 ```
 
 ### 4. `Visual Studio Code` (vscode) 설치
--
--
+- 코드 에디터(코드 작성 도구)
+- Solidity & Javascript 코드 작성을 위한 tool
 
 ```shell
 > choco install vscode -y
@@ -57,6 +57,8 @@ git version 2.17.0.windows.1
 ```
 
 ### 5. `Node.js` 설치
+- V8 Engine javascript runtime
+- Ethereum DApp 개발을 위해 가장 중요한 `web3` library를 활용하기 위함
 
 ```shell
 > choco install nodejs -y
