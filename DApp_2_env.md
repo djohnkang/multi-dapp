@@ -72,5 +72,3 @@ v10.1.0 # 반드시 8 이상.
 > npm install --global --production windows-build-tools
 # 이 친구도 시간이 좀 오래 걸립니다ㅜㅜ
 ```
-
-### 7.

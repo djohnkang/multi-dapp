@@ -108,15 +108,6 @@ contract HelloWorld {
     }
 }
 ```
-* 함수의 종류
-  | Function type | Description                                                  |
-  | ------------- | ------------------------------------------------------------ |
-  | public        | 누구나 호출 할 수 있는 function                              |
-  | private       | 해당 Contract 내에서만 호출 할 수 있는 function              |
-  | **view**      | 이 function 은 data 를 return 하며, Contract 의 data 를 수정하지 않는다. |
-  | constant      | 이 function 은 data 를 return 하며, Contract 의 data 를 수정하지 않는다. |
-  | pure          | 이 function 은 Contract 의 데이터를 수정하거나, 읽지 않는다. |
-  | payable       | 누군가 이 function 을 호출하면, ether 를 함께 보낼 수도 있다. |
 
 * Contract function 의 실행
 
@@ -144,16 +135,22 @@ contract HelloWorld {
 * 블록체인 상의 데이터를 바꾼다 => Submit a transaction (transaction 제출)
 
 ### Solidity 기초
-자료의 **저장** & 자료의 **계산(조작)**
+Smart Contract를 구현하기 위한 컨트랙트 기반의 **고급 프로그래밍 언어**
+- **고급** : Ethereum Bytecode(Turing Complete)를 직접 작성할 수 없음 -> 인간 언어에 가까운 언어로 작성해야함
+
+- **프로그래밍 언어** : 데이터를 **저장** & 데이터를 **계산(조작)**
+
+- 정적타입, 상속, 라이브러리, 복잡한 사용자 정의 자료형을 지원
 
 #### 1. Data의 저장
+
 * 기본 자료형(Basic Data Types)
 * 변수(Variable)
 * 배열(Array)
 * 매핑(Mapping)
 * 구조체(Struct)
 
-1. Solidity 의 Basic Data types
+##### (1) Solidity 의 Basic Data types
 
     | Name         | Descriptions                            | Examples                  |
     | ------------ | --------------------------------------- | ------------------------- |
@@ -164,7 +161,8 @@ contract HelloWorld {
     | fixed/ufixed | 'Fixed' point number. 소숫점 있음       | `10.1`, `-42.2` `3.14`    |
     | address      | Money 를 전송하는 메서드가 포함되어있음 | `0x134bae199c8dbae188c8d` |
 
-2. 변수
+##### (2) 변수
+단일 데이터 저장
 
 ```solidity
 // 사용할 solidity version 명시
@@ -173,39 +171,63 @@ pragma solidity ^0.4.21;
 // 새로운 Contract 를 정의(Class로 생각하세요)
 contract Me {
 
-    string name;
-    uint age;
-    bool isMarried;
+  string name;
+  uint age;
+  bool isMarried;
 
-    function getName() public view returns (string) {
-        return "hello world!"
-    }
+  function getName() public view returns (string) {
+      return "hello world!"
+  }
 }
 ```
 
-3. 배열
+##### (3) 배열
+연속된 데이터 저장
 
 ```solidity
-// 사용할 solidity version 명시
 pragma solidity ^0.4.21;
 
-contract Calculator {
+// 강의(Lecture) Contract 생성
+contract Lecture {
 
-    function addToNumber(uint num, uint num2) public pure returns(uint){
-        return num + num2;
-    }
+  string lecturer; // 강의자
+  string[] students; // 학생
 
-    function substractNumber(uint num, uint num2) public pure returns(uint) {
-        return num - num2;
-    }
+  // function getLecturer() -> 강의자를 불러오는 함수
+  // function getStudent() -> 특정 학생을 불러오는 함수
+  // function getNumberOfStudents() -> 학생 전체의 수를 불러오는 함수
+}
+```
 
-    function multiplyWithNumber(uint num, uint num2) public pure returns(uint) {
-        return num * num2;
-    }
+##### (4) 매핑(Mapping)
+key, value 페어로 저장
 
-    function divideByNumber(uint num, uint num2) public pure returns(uint) {
-        return num / num2;
-    }
+```solidity
+pragma solidity ^0.4.21;
+
+// 직장(Workplace) Contract 생성
+contract Workplace {
+
+  mapping(string => string) employees;
+  // function getEmployees() -> 강의자를 불러오는 함수
+}
+```
+
+##### (5) 구조체(Struct)
+사용자 정의 자료형
+
+```solidity
+pragma solidity ^0.4.21;
+
+// 사람(People) Contract 생성
+contract People {
+
+  struct Person {
+    string name;
+    uint age;
+  }
+
+  Person[] people;
 }
 ```
 
@@ -234,7 +256,7 @@ contract Menu {
 
 ### Gas system
 
-| gasPrice                                                     | starGas/gasLimit                                             |
+| gasPrice                                                     | startGas/gasLimit                                             |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 1 gas unit 의 **wei** 가격. (특정 contract 를 진행하기 위해서) | 해당 transaction 을 진행하기 위해서 사용할 수 있는 gas 의 총량 |
 
