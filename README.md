@@ -3,8 +3,8 @@
 
 ## Contents
 1. [Ethereum 및 DApp 기초 + Solidity + Remix](DApp_1_basic.md)
-2. [Geth & Mist](DApp_2_geth_and_mist.md)
-3. [로컬환경설정](DApp_3_env.md)
+2. [로컬환경설정](DApp_2_env.md)
+3. [Geth & Mist](DApp_3_geth_and_mist.md)
 4. [Crowdfund DApp](DApp_4_crowdfund.md)
 5. [Truffle + ERC20 token 발행하기](DApp_5_token.md)
 6. [Whisper + chatt DApp](Whisper_chat.md)
