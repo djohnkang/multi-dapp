@@ -209,7 +209,7 @@ pragma solidity ^0.4.21;
 contract Workplace {
 
   mapping(string => string) employees;
-  // function getEmployees() -> 강의자를 불러오는 함수
+  // function getEmployees() -> 직원들을 불러오는 함수
 }
 ```
 
