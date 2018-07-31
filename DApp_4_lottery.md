@@ -30,7 +30,7 @@
 * remix 에 작성해 볼 코드
 
     ```solidity
-    pragma solidity ^0.4.17;
+    pragma solidity ^0.4.21;
 
     contract Lottery {
         address public manager;
@@ -54,7 +54,7 @@
 * remix
 
     ```solidity
-    pragma solidity ^0.4.17;
+    pragma solidity ^0.4.21;
 
     contract Lottery {
         address public manager;
@@ -83,7 +83,7 @@
 * Remix - `enter()` function 만들기
 
     ```solidity
-    pragma solidity ^0.4.17;
+    pragma solidity ^0.4.21;
 
     contract Lottery {
         address public manager;
@@ -105,7 +105,7 @@
 * Remix - `random()`  function 만들기
 
     ```solidity
-    pragma solidity ^0.4.17;
+    pragma solidity ^0.4.21;
 
     contract Lottery {
         address public manager;
@@ -130,7 +130,7 @@
 * Remix - `pickWinner()` function 만들기.
 
     ```solidity
-    pragma solidity ^0.4.17;
+    pragma solidity ^0.4.21;
 
     contract Lottery {
         address public manager;
@@ -161,7 +161,7 @@
 * Remix - 중복코드 제거용 `modifier` 생성
 
     ```solidity
-    pragma solidity ^0.4.17;
+    pragma solidity ^0.4.21;
 
     contract Lottery {
         address public manager;
@@ -198,7 +198,7 @@
 * Remix - `getPlayers()` function 생성. (players들 전체 조회)
 
     ```solidity
-    pragma solidity ^0.4.17;
+    pragma solidity ^0.4.21;
 
     contract Lottery {
         address public manager;
@@ -247,7 +247,7 @@
    * `\lottery\contracts\Lottery.sol` 생성
 
      ```solidity
-     pragma solidity ^0.4.17;
+     pragma solidity ^0.4.21;
 
      contract Lottery {
          address public manager;

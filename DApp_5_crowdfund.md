@@ -10,15 +10,15 @@
 
 - Campaign contract 를 작성합니다.
 
-```javascript
-pragma solidity ^0.4.17;
+```solidity
+pragma solidity ^0.4.21;
 
 contract Campaign {
     // Campaign의 관리자와 최소 후원금액을 설정하는 변수를 선언합니다.
     address public manager;
     uint public minimumContribution;
 
-    function Campaign(uint minimum) public {
+    constructor(uint minimum) public {
         manager = msg.sender;
         minimumContribution = minimum;
     }
@@ -27,8 +27,8 @@ contract Campaign {
 
 - 후원을 위한 함수를 작성합니다.
 
-```javascript
-pragma solidity ^0.4.17;
+```solidity
+pragma solidity ^0.4.21;
 
 contract Campaign {
     address public manager;
@@ -36,7 +36,7 @@ contract Campaign {
     // 후원을 한 사람들을 저장할 변수인 address타입의 동적 배열 approovers를 선언합니다.
     address[] public approvers;
 
-    function Campaign(uint minimum) public {
+    constructor(uint minimum) public {
         manager = msg.sender;
         minimumContribution = minimum;
     }
@@ -53,8 +53,8 @@ contract Campaign {
 - 테스트를 해봅시다.
 - Request 구조체를 만들어봅시다.
 
-```javascript
-pragma solidity ^0.4.17;
+```solidity
+pragma solidity ^0.4.21;
 
 contract Campaign {
     // Request 구조체를 선언합니다.
@@ -69,7 +69,7 @@ contract Campaign {
     uint public minimumContribution;
     address[] public approvers;
 
-    function Campaign(uint minimum) public {
+    constructor(uint minimum) public {
         manager = msg.sender;
         minimumContribution = minimum;
     }
@@ -82,8 +82,8 @@ contract Campaign {
 
 - requests 생성
 
-```javascript
-pragma solidity ^0.4.17;
+```solidity
+pragma solidity ^0.4.21;
 
 contract Campaign {
     struct Request {
@@ -105,7 +105,7 @@ contract Campaign {
         _;
     }
 
-    function Campaign(uint minimum) public {
+    constructor(uint minimum) public {
         manager = msg.sender;
         minimumContribution = minimum;
     }
@@ -120,8 +120,8 @@ contract Campaign {
 - 스토리지: 상태 변수, 함수 내 로컬 변수
   메모리: 함수의 매개 변수, 함수의 리턴값
 
-```javascript
-pragma solidity ^0.4.17;
+```solidity
+pragma solidity ^0.4.21;
 
 contract Campaign {
     struct Request {
@@ -140,7 +140,7 @@ contract Campaign {
         _;
     }
 
-    function Campaign(uint minimum) public {
+    constructor(uint minimum) public {
         manager = msg.sender;
         minimumContribution = minimum;
     }
@@ -150,7 +150,7 @@ contract Campaign {
     }
     // Request요청은 manager만 할 수 있고 새로만든 Request는 requests배열에 넣는 함수를 생성한다.
     function createRequest(string description, uint value, address recipient) public restricted {
-        // 왜 memory를 사용했는가?? 추가해야됨
+        // memory 키워드 사용
         Request memory newRequest = Request({
            description: description,
            value: value,
@@ -164,8 +164,8 @@ contract Campaign {
 
 - mapping
 
-```javascript
-pragma solidity ^0.4.17;
+```solidity
+pragma solidity ^0.4.21;
 
 contract Campaign {
     struct Request {
@@ -186,7 +186,7 @@ contract Campaign {
         _;
     }
 
-    function Campaign(uint minimum) public {
+    constructor(uint minimum) public {
         manager = msg.sender;
         minimumContribution = minimum;
     }
@@ -197,8 +197,7 @@ contract Campaign {
         approvers[msg.sender] = true;
     }
     function createRequest(string description, uint value, address recipient) public restricted {
-        // 강의에서는 추가한코드, restricted modifier때문에 매니저가 아니면 안되는데 왜 추가 한거지??
-        // 아래코드는 계속해서 추가 하지마세요. ㄹ머ㅐㅈ도려ㅑㅁㅈ도려ㅑㅣㅁㅈ더랴;ㅐㅁ젇해;먖더해먀;ㅈ더
+        // 코드삭제. 
         // require(approvers[msg.sender]);
 
         Request memory newRequest = Request({
@@ -214,8 +213,8 @@ contract Campaign {
 
 - 투표를 위한 함수를 작성한다.
 
-```javascript
-pragma solidity ^0.4.17;
+```solidity
+pragma solidity ^0.4.21;
 
 contract Campaign {
     struct Request {
@@ -238,7 +237,7 @@ contract Campaign {
         _;
     }
 
-    function Campaign(uint minimum) public {
+    constructor(uint minimum) public {
         manager = msg.sender;
         minimumContribution = minimum;
     }
@@ -247,7 +246,7 @@ contract Campaign {
         approvers[msg.sender] = true;
     }
     function createRequest(string description, uint value, address recipient) public restricted {
-        require(approvers[msg.sender]);
+        //require(approvers[msg.sender]);
 
         Request memory newRequest = Request({
            description: description,
@@ -265,8 +264,8 @@ contract Campaign {
 
 - approveRequest
 
-```javascript
-pragma solidity ^0.4.17;
+```solidity
+pragma solidity ^0.4.21;
 
 contract Campaign {
     struct Request {
@@ -287,7 +286,7 @@ contract Campaign {
         _;
     }
 
-    function Campaign(uint minimum) public {
+    constructor(uint minimum) public {
         manager = msg.sender;
         minimumContribution = minimum;
     }
@@ -296,7 +295,7 @@ contract Campaign {
         approvers[msg.sender] = true;
     }
     function createRequest(string description, uint value, address recipient) public restricted {
-        require(approvers[msg.sender]);
+        //require(approvers[msg.sender]);
 
         Request memory newRequest = Request({
            description: description,
@@ -325,7 +324,7 @@ contract Campaign {
 
 - 간소화
 
-```javascript
+```solidity
     function approveRequest(uint index) public {
         // 위에서 작성했던 코드중 중복된 부분을 다음과 같이 바꿀 수 있습니다.
         // 변수의 저장은 storage로 합니다.
@@ -343,8 +342,8 @@ contract Campaign {
 - 중간테스트 - 강의 121
 - request 종료
 
-```javascript
-pragma solidity ^0.4.17;
+```solidity
+pragma solidity ^0.4.21;
 
 contract Campaign {
     struct Request {
@@ -366,8 +365,8 @@ contract Campaign {
         require(msg.sender == manager);
         _;
     }
-
-    function Campaign(uint minimum) public {
+    
+    constructor(uint minimum) public {
         manager = msg.sender;
         minimumContribution = minimum;
     }
@@ -378,7 +377,7 @@ contract Campaign {
         approversCount++;
     }
     function createRequest(string description, uint value, address recipient) public restricted {
-        require(approvers[msg.sender]);
+        //require(approvers[msg.sender]);
 
         Request memory newRequest = Request({
            description: description,
@@ -419,8 +418,8 @@ contract Campaign {
 
 - 여러개의 캠페인
 
-```javascript
-pragma solidity ^0.4.17;
+```solidity
+pragma solidity ^0.4.21;
 
 // 각각의 Campaign을 만드는 contract를 작성합니다.
 contract CampaignFactory {
@@ -462,7 +461,7 @@ contract Campaign {
     }
 
     // Campaign을 생성한 유저의 주소를 넣기 위해 creator를 파라미터로 받고 manager로 등록합니다.
-    function Campaign(uint minimum, address creator) public {
+    constructor(uint minimum, address creator) public {
         manager = creator;
         minimumContribution = minimum;
     }
@@ -472,7 +471,7 @@ contract Campaign {
         approversCount++;
     }
     function createRequest(string description, uint value, address recipient) public restricted {
-        require(approvers[msg.sender]);
+        //require(approvers[msg.sender]);
 
         Request memory newRequest = Request({
            description: description,
@@ -510,8 +509,8 @@ contract Campaign {
 
 - 전체코드
 
-```javascript
-pragma solidity ^0.4.17;
+```solidity
+pragma solidity ^0.4.21;
 
 contract CampaignFactory {
     address[] public deployedCampaigns;
@@ -545,7 +544,7 @@ contract Campaign {
         _;
     }
 
-    function Campaign(uint minimum, address creator) public {
+    constructor(uint minimum, address creator) public {
         manager = creator;
         minimumContribution = minimum;
     }
@@ -555,7 +554,7 @@ contract Campaign {
         approversCount++;
     }
     function createRequest(string description, uint value, address recipient) public restricted {
-        require(approvers[msg.sender]);
+        //require(approvers[msg.sender]);
 
         Request memory newRequest = Request({
            description: description,

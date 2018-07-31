@@ -14,22 +14,22 @@
 * 모든 Ethereum Node는 완전한 연속된 블록들(**Blockchain**)을 복사해서 저장한다.
 * **Blockchain**은 일어난 모든 거래(transaction)들의 레코드를 저장한 **거래 장부 (or 데이터베이스)** 라고 볼 수 있다.
 
-## Ethereum Network 사용하기.
+## Ethereum Network 사용하기
 
 ### 사용자
-  1. **`Metamask`** : 브라우저에서 활용할 수 있는 Ethereum Wallet
-    * 하나의 계정으로 모든 네트워크 사용
-    * 가입 & 12words 저장.
-    * Ropsetn Test Network 로 이동.
-    * https://faucet.metamask.io/ 에서 ether 받기.
+  * **`Metamask`** : 브라우저에서 활용할 수 있는 Ethereum Wallet
+  * 하나의 계정으로 모든 네트워크 사용
+  * 가입 & 12words 저장.
+  * Ropsetn Test Network 로 이동.
+  * https://faucet.metamask.io/ 에서 ether 받기.
 
 ### 개발자
-  1. **`web3.js`** : Ethereum javacript API
-    * Ethereum 네트워크와 Interaction 할 수 있는 Javascript Library
-    * 다양한 Javascript runtime 환경에서 활용 가능 : 브라우저, local machine(node.js)
-    * **DApp 활용을 위한 표준 Interface로 자리 잡고 있음**
-    * `Metamask`도 `web3.js`를 기반으로 만들어짐
-    * https://github.com/ethereum/web3.js/
+  * **`web3.js`** : Ethereum javacript API
+  * Ethereum 네트워크와 Interaction 할 수 있는 Javascript Library
+  * 다양한 Javascript runtime 환경에서 활용 가능 : 브라우저, local machine(node.js)    
+  * **DApp 활용을 위한 표준 Interface로 자리 잡고 있음**
+  * `Metamask`도 `web3.js`를 기반으로 만들어짐
+  * https://github.com/ethereum/web3.js/
 
 ## Ethereum Transaction
 사용자(User)의 입장에서 Ethereum Network 활용하기
@@ -91,18 +91,16 @@ Self-excuting Contract
   | Storage | 해당 거래의 데이터를 저장하는 저장고 |
   | Code    | 해당 거래를 위한 기계어 코드         |
 
+## Solidity & Remix
 
-
-## Remix
-
-### First Contract
+### First Contract : 직접 Contract를 만들어 봅시다 :)
 <https://remix.ethereum.org>로 접속
 
 ```solidity
 // 사용할 solidity version 명시
-pragma solidity ^0.4.24;
+pragma solidity ^0.4.21;
 
-// 새로운 Contract 를 정의(Class 로 생각하자.)
+// 새로운 Contract 를 정의(Class로 생각하세요)
 contract HelloWorld {
 
     function hello() public pure returns (string) {
@@ -110,14 +108,24 @@ contract HelloWorld {
     }
 }
 ```
-| Function type | Description                                                  |
-| ------------- | ------------------------------------------------------------ |
-| public        | 누구나 호출 할 수 있는 function                              |
-| private       | 해당 Contract 내에서만 호출 할 수 있는 function              |
-| **view**      | 이 function 은 data 를 return 하며, Contract 의 data 를 수정하지 않는다. |
-| constant      | 이 function 은 data 를 return 하며, Contract 의 data 를 수정하지 않는다. |
-| pure          | 이 function 은 Contract 의 데이터를 수정하거나, 읽지 않는다. |
-| payable       | 누군가 이 function 을 호출하면, ether 를 함께 보낼 수도 있다. |
+* 함수의 종류
+  | Function type | Description                                                  |
+  | ------------- | ------------------------------------------------------------ |
+  | public        | 누구나 호출 할 수 있는 function                              |
+  | private       | 해당 Contract 내에서만 호출 할 수 있는 function              |
+  | **view**      | 이 function 은 data 를 return 하며, Contract 의 data 를 수정하지 않는다. |
+  | constant      | 이 function 은 data 를 return 하며, Contract 의 data 를 수정하지 않는다. |
+  | pure          | 이 function 은 Contract 의 데이터를 수정하거나, 읽지 않는다. |
+  | payable       | 누군가 이 function 을 호출하면, ether 를 함께 보낼 수도 있다. |
+
+* Contract function 의 실행
+
+  | function 호출                      | function 을 통해 transaction 이 일어남. |
+  | ---------------------------------- | --------------------------------------- |
+  | Contract 의 data 를 수정할 수 없음 | Contract 의 data 를 수정할 수 있음      |
+  | 바로 실행됨                        | 실행에 시간이 걸림                      |
+  | Data 를 리턴 가능                  | transaction 의 hash 값을 return         |
+  | 무료                               | 유료                                    |
 
 * External Account 가 Contract 를 생성하는 Transaction 의 구성
 
@@ -135,133 +143,104 @@ contract HelloWorld {
 
 * 블록체인 상의 데이터를 바꾼다 => Submit a transaction (transaction 제출)
 
-* Contract function 의 실행
+### Solidity 기초
+자료의 **저장** & 자료의 **계산(조작)**
 
-  | function 호출                      | function 을 통해 transaction 이 일어남. |
-  | ---------------------------------- | --------------------------------------- |
-  | Contract 의 data 를 수정할 수 없음 | Contract 의 data 를 수정할 수 있음      |
-  | 바로 실행됨                        | 실행에 시간이 걸림                      |
-  | Data 를 리턴 가능                  | transaction 의 hash 값을 return         |
-  | 무료                               | 유료                                    |
+#### 1. Data의 저장
+* 기본 자료형(Basic Data Types)
+* 변수(Variable)
+* 배열(Array)
+* 매핑(Mapping)
+* 구조체(Struct)
 
+1. Solidity 의 Basic Data types
 
+    | Name         | Descriptions                            | Examples                  |
+    | ------------ | --------------------------------------- | ------------------------- |
+    | string       | 연속된 문자들                           | `"Hack"` `"Life"`         |
+    | bool         | 참/거짓 값                              | `true` `false`            |
+    | int          | 정수값, 음수/양수, 소숫점 없음          | `0` `-30000` `59158`      |
+    | uint         | 'Unsigned' int, 양수, 소숫점 없음       | `0` `30000` `999910`      |
+    | fixed/ufixed | 'Fixed' point number. 소숫점 있음       | `10.1`, `-42.2` `3.14`    |
+    | address      | Money 를 전송하는 메서드가 포함되어있음 | `0x134bae199c8dbae188c8d` |
 
-### Wei vs Ether
-
-1 Ether == 1,000,000,000,000,000,000 Wei
-
-### Gas system
-
-| gasPrice                                                     | starGas/gasLimit                                             |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1 gas unit 의 **wei** 가격. (특정 contract 를 진행하기 위해서) | 해당 transaction 을 진행하기 위해서 사용할 수 있는 gas 의 총량 |
+2. 변수
 
 ```solidity
 // 사용할 solidity version 명시
-pragma solidity ^0.4.24;
+pragma solidity ^0.4.21;
 
-// 새로운 Contract 를 정의(Class 로 생각하자.)
-contract Note {
+// 새로운 Contract 를 정의(Class로 생각하세요)
+contract Me {
 
-	// Contract 에서 존재할 모든 Instance 변수를 선언. (Staorage Variable)
-    string public message;
+    string name;
+    uint age;
+    bool isMarried;
 
-    // contract 이름과 같음 = 생성자 function
-    function Note(string initialMessage) public {
-        message = initialMessage;
-
-    }
-
-    function setNote(string newMessage) public {
-        message = newMessage;
-    }
-
-    // getMessage() => function name | public view => function type | return 할 대상의 type
-    // 사실 Starage Variable 은 생성되는 순간 변수 이름과 같은 return function 이 생성됨.
-    // 아래 function 은 이미 존재하는 function 을 굳이 또 적은것.
-    function getMessage() public view returns(string) {
-        return message;
+    function getName() public view returns (string) {
+        return "hello world!"
     }
 }
 ```
 
-| Function type | Description                                                  |
-| ------------- | ------------------------------------------------------------ |
-| public        | 누구나 호출 할 수 있는 function                              |
-| private       | 해당 Contract 내에서만 호출 할 수 있는 function              |
-| **view**      | 이 function 은 data 를 return 하며, Contract 의 data 를 수정하지 않는다. |
-| constant      | 이 function 은 data 를 return 하며, Contract 의 data 를 수정하지 않는다. |
-| pure          | 이 function 은 Contract 의 데이터를 수정하거나, 읽지 않는다. |
-| payable       | 누군가 이 function 을 호출하면, ether 를 함께 보낼 수도 있다. |
-
-
-
-* External Account 가 Contract 를 생성하는 Transaction 의 구성
-
-  | name              | Description                                                  |
-  | ----------------- | ------------------------------------------------------------ |
-  | nonce             | 해당 계정에서 생성한 transaction 수.                         |
-  | to                | - (to 가 비어있으면, Ethereum 네트워크가 자동으로 contract 생성이라고 판단.) |
-  | **data**          | 해당 Contract 의 컴파일 된 기계코드                          |
-  | value             | 타겟 계정으로 전송될 'Wei' 의 양                             |
-  | gasPrice          | 해당 transaction 을 진행할 때 전송자(contract 를 생성하는 계정)가 사용할 gas 1 유닛 의 wei 가격. |
-  | startGas/gasLimit | 해당 transaction 이 소비할 수 있는 가스의 유닛 수            |
-  | v                 | 전송자의 계정주소를 의미하는                                 |
-  | r                 | 엄청나게 보안적으로 복잡한 데이터들                          |
-  | s                 | 전송자의 private key 를 통해 생성됨. private key => v-r-s  / v-r-s =/=> pk |
-
-* 블록체인 상의 데이터를 바꾼다 => Submit a transaction (transaction 제출)
-
-* Contract function 의 실행
-
-  | function 호출                      | function 을 통해 transaction 이 일어남. |
-  | ---------------------------------- | --------------------------------------- |
-  | Contract 의 data 를 수정할 수 없음 | Contract 의 data 를 수정할 수 있음      |
-  | 바로 실행됨                        | 실행에 시간이 걸림                      |
-  | Data 를 리턴 가능                  | transaction 의 hash 값을 return         |
-  | 무료                               | 유료                                    |
-
-
-
-### Wei vs Ether
-
-1 Ether == 1,000,000,000,000,000,000 Wei
-
-### Gas system
-
-| gasPrice                                                     | starGas/gasLimit                                             |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 1 gas unit 의 **wei** 가격. (특정 contract 를 진행하기 위해서) | 해당 transaction 을 진행하기 위해서 사용할 수 있는 gas 의 총량 |
-
-* Remix
+3. 배열
 
 ```solidity
-pragma solidity ^0.4.17;
+// 사용할 solidity version 명시
+pragma solidity ^0.4.21;
 
-contract Note {
+contract Calculator {
 
-    string public message;
-
-    function Note(string initialMessage) public {
-        message = initialMessage;    
+    function addToNumber(uint num, uint num2) public pure returns(uint){
+        return num + num2;
     }
 
-    function setMessage(string newMessage) public {
-        message = newMessage;
+    function substractNumber(uint num, uint num2) public pure returns(uint) {
+        return num - num2;
     }
 
-    function doMath(int a, int b) {
-    		   // 필요한 Gas
-        a + b;  // 3
-        b - a;  // 3
-        a * b;  // 5
-        a == 0; // 3
+    function multiplyWithNumber(uint num, uint num2) public pure returns(uint) {
+        return num * num2;
+    }
+
+    function divideByNumber(uint num, uint num2) public pure returns(uint) {
+        return num / num2;
+    }
+}
+```
+
+### 실전 DApp 만들기 : 저녁메뉴 추천 Contract
+
+```solidity
+pragma solidity ^0.4.21;
+
+contract Menu {
+
+    string[] list = ["짜장면","탕수육","볶음밥","짬뽕","냉면"];
+    uint[] result;
+
+    function random() public view returns (uint) {
+        return uint(uint256(keccak256(block.timestamp, now)) % list.length);
+    }
+
+    function pick() public view returns(string) {
+        return list[random()];
     }
 
 }
 ```
 
 ## 참고 및 주의사항
+
+### Gas system
+
+| gasPrice                                                     | starGas/gasLimit                                             |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1 gas unit 의 **wei** 가격. (특정 contract 를 진행하기 위해서) | 해당 transaction 을 진행하기 위해서 사용할 수 있는 gas 의 총량 |
+
+* 1 Ether == 1,000,000,000,000,000,000 Wei
+
+
 ### Metamask's Mnemonic Phrases (12 secret words)
 
 * 반드시 저장할 것.
