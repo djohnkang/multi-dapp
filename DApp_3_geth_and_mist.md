@@ -110,7 +110,8 @@ eth.sendTransaction({from:eth.accounts[0], to:eth.accounts[1], value:web3.toWei(
 
 에러 !
 
-// 잠금해제 personal.unlockAccount(eth.accounts[0],"비밀번호")
+// 잠금해제
+personal.unlockAccount(eth.accounts[0],"비밀번호")
 
 // 보류중인 거래들
 eth.pendingTransactions
