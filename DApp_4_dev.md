@@ -62,7 +62,8 @@ C:₩Users₩[Username]₩dapp₩hello
 ```
 
 #### (2) `npm`을 통한 javascript dependency 관리 
-- 
+`npm` : node package manager
+
 ```shell
 > npm init
 
@@ -92,7 +93,7 @@ package.json
 > npm install --save ganache-cli
 ```
 
-4. 한 번에 설치하기
+4. **한 번에 설치하기**
 
 ```shell
 > npm install --save solc web3 ganache-cli 
