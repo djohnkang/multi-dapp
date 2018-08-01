@@ -15,8 +15,8 @@ DApp 개발(Solidity 코드 작성, 테스트, 배포)을 위한 개발 및 배�
 
 | Issue                                                   | Solution                                                 |
 | ------------------------------------------------------- | -------------------------------------------------------- |
-| solidity 코드를 JS 프로젝트 안에 작성할 수 있어야 한다. | Solidity 컴파일러를 설치한다.                            |
-| Remix 와 달리 GUI가 아닌 자동화된 test 가 필요하다.     | Custom `Mocha` 테스트로 어떻게든 Solidity 코드를 테스트. |
+| solidity 코드를 JS 프로젝트 안에 작성할 수 있어야 한다. | Solidity 컴파일러를 설치한다. `solc`                      |
+| Remix 와 달리 GUI가 아닌 자동화된 test 가 필요하다.     | Custom `Mocha` 테스트로 Solidity 코드를 테스트. |
 | public network 에 contract 를 배포하기.                 | 컴파일+배포용 스크립트를 작성한다.                       |
 
 ### 1. `Node.js` 설치
@@ -30,7 +30,7 @@ v10.1.0 # 반드시 8 이상.
 ```
 
 ### 2. `windows-build-tools` 설치
-- native Node module들을 컴파일 하기 위해 필요
+- native node.js module들을 컴파일 하기 위해 필요
 - `web3` 라이브러리를 활용하기 위해 필수적으로 설치해야함
 
 ```shell
