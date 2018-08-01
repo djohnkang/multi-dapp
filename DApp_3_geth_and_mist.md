@@ -1,4 +1,5 @@
 # Geth & Mist
+Ethereum Node 구축을 위한 `geth`와 `mist` 설치
 
 ## 1. Geth
 Go ethereum client

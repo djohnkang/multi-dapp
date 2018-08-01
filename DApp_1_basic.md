@@ -267,16 +267,3 @@ contract Menu {
 * 반드시 저장할 것.
 * https://iancoleman.io/bip39/
   * 위 주소에 mnemonic phrases 를 입력하고, 코인을 Ethereum 으로 바꾸면 아래 Derived Addresses 에 본인 계정들이 나온다. 현재 default 계정의 Address 와 표시된 첫 번째 Address 를 확인.
-
-## Authors
-Translated, edited, and written by
-- 강동주 [djohnkang](https://github.com/djohnkang)
-- 유태영 [neovansoarer](https://github.com/neovansoarer)
-- 오창희 [5chang2](https://github.com/5chang2)
-
-## Acknowledgement
-- Stephen Grider [StephenGrider](https://github.com/StephenGrider)
-  - [ethereum and solidity the complete developer's guide](https://www.udemy.com/ethereum-and-solidity-the-complete-developers-guide/learn/v4/t/lecture/9025578?start=1)
-
-## License
-Under the [MIT License](https://opensource.org/licenses/MIT).
