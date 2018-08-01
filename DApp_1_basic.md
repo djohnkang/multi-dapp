@@ -239,10 +239,9 @@ pragma solidity ^0.4.21;
 contract Menu {
 
     string[] list = ["짜장면","탕수육","볶음밥","짬뽕","냉면"];
-    uint[] result;
 
     function random() public view returns (uint) {
-        return uint(uint256(keccak256(block.timestamp, now)) % list.length);
+        return uint(keccak256(abi.encodePacked(block.timestamp, now))) % list.length;
     }
 
     function pick() public view returns(string) {
