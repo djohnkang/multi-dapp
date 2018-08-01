@@ -8,7 +8,6 @@
 
   * Testing을 위한 로컬 환경설정 필요
 
-
 ### 1. Build project
 
 ```shell
@@ -29,9 +28,10 @@ note> ls
 package.json
 ```
 
-### 2. Install npm modules
+### 2. Install `solc`
+`solc` 솔리디티 컴파일러 설치
 
-```powershell
+```shell
 note> npm install --save solc
 ```
 
@@ -87,23 +87,12 @@ module.exports = solc.compile(source, 1).contracts[':Note'];
 ```
 
 ### 7. npm module 추가 설치
-
+`web3`와 `ganache-cli` 설치
+- `web3`는 Ethereum Network 와 Interact할 수 있게 하는 JS library.
+- `ganache-cli` 는 로컬 Ehtereum network를 구축(로컬 테스트를 위한 환경, ganache의 Command Line Interface)
 ```shell
 note> npm install --save web3 ganache-cli
 ```
 
-* `web3`는 Ethereum Network 와 Interact할 수 있게 하는 JS library.
-* `ganache-cli` 는 로컬 Ehtereum network를 구축(로컬 테스트를 위한 환경, ganache의 Command Line Interface)
-
-## Authors
-Translated, edited, and written by
-- 강동주 [djohnkang](https://github.com/djohnkang)
-- 유태영 [neovansoarer](https://github.com/neovansoarer)
-- 오창희 [5chang2](https://github.com/5chang2)
-
-## Acknowledgement
-- Stephen Grider [StephenGrider](https://github.com/StephenGrider)
-  - [ethereum and solidity the complete developer's guide](https://www.udemy.com/ethereum-and-solidity-the-complete-developers-guide/learn/v4/t/lecture/9025578?start=1)
-
-## License
-Under the [MIT License](https://opensource.org/licenses/MIT).
+* 이제 Test를 통해 각 개발 단계(functional, compilation, deployment)에서 코드가 정상적으로 작동하는지 테스트해야 합니다.
+* [실전 DApp 첫번째 : Test 붙이기](DApp_7_test.md) 를 참고해주세요.

@@ -7,9 +7,9 @@
 3. [Geth & Mist](DApp_3_geth_and_mist.md)
 4. [개발 및 배포 환경 구축](DApp_4_dev.md)
 5. [Javascript Refresher](DApp_5_javascript_refresher.md)
-5. [실전 DApp 첫번째 : 노트(Note) DApp 만들기](DApp_6_note.md)
-5. [실전 DApp 첫번째 : Test 붙이기](DApp_7_test.md)
-5. [실전 DApp 첫번째 : 네트워크에 배포하기](DApp_8_deploy.md)
+5. [실전 DApp 첫번째(1) : 노트(Note) DApp 만들기](DApp_6_note.md)
+5. [실전 DApp 첫번째(2) : Test 붙이기](DApp_7_test.md)
+5. [실전 DApp 첫번째(3) : 네트워크에 배포하기](DApp_8_deploy.md)
 5. [실전 DApp 두번째 : 로또(Lottery) DApp 만들기](DApp_9_lottery.md)
 
 ## Authors

@@ -1,7 +1,17 @@
 # Mocha를 통한 JS testing & TDD
 Mocha test framework를 활용한 TDD
 
-### Mocha 기초 functions
+## DApp 개발에서의 테스트
+- Smart Contract은 Ethereum 네트워크에 배포됨(다른 transaction들과 유사하게)
+- Ethereum Blockchain에 기록된 Transaction은 **수정이 불가** !
+- 따라서 Contract은 **개발 단계부터 철저한 Test를 필요로 함**
+
+## Contract Test 방법
+1. Solidity를 통한 테스트
+
+2. Javascript를 통한 테스트
+
+## Mocha 기초 functions
 
 | Function     | Purpose                                       |
 | ------------ | --------------------------------------------- |
@@ -159,5 +169,6 @@ describe('Note', () => {
 });
 ```
 
-* Test 가 성공적을 끝나면 실제 배포를 해볼 차례다.
-* `note\deploy.js` 를 생성하고 배포코드를 작성해보자.
+* Test가 성공적을 끝나면 실제 배포를 해볼 차례입니다 !
+* `note\deploy.js` 를 생성하고 배포코드를 작성해봅시다.
+* [실전 DApp 첫번째 : 네트워크에 배포하기](DApp_8_deploy.md) 를 참고해주세요.

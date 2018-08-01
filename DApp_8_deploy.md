@@ -43,4 +43,4 @@ Attempting to deploy from account [acoount_address]
 Contract deployed to [contrcat_address]
 ```
 
-* Console 에 Contract Address 가 나타난다면, https://ropsten.etherscan.io/address/[contract_address] 를 입력하고 실제 배포되었는지 확인해보자.
+* Console 에 Contract Address 가 나타난다면, https://ropsten.etherscan.io/address/[contract_address] 를 입력하고 실제 배포되었는지 확인해봅시다 :)

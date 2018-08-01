@@ -39,7 +39,7 @@ const hello = () => {
 ```
 
 ## IV. OOP
-### 1. `class` 
+### 1. `class`를 활용한 클래스 만들기 
 ```js
 class Car {
     park() {
@@ -63,7 +63,7 @@ const data = fs.readFileSync('/file.md'); // file 읽기
 
 ### 2. File 조작
 
-## VI. Async
+## VI. Async 비동기 함수와 처리
 ### 1. 일반적인 오해 : javscript는 비동기?
 동기(synchronous, blocking) 함수 
 ```js
@@ -75,6 +75,6 @@ sleep()
 setTimeOut()
 ```
 
-### 3. Promise 객체
+### 3. `Promise` 객체
 
 ### 4. `async` & `await`
