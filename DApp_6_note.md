@@ -94,5 +94,12 @@ module.exports = solc.compile(source, 1).contracts[':Note'];
 note> npm install --save web3 ganache-cli
 ```
 
+#### 에러 발생 !
+- 멀티캠퍼스 방화벽 환경으로 인해 github에서 내려 받는 소스를 다운로드 받을 수 없어 생기는 문제
+- console창에 다음의 코드를 입력하세요
+```shell
+> git config —global url."https://".insteadOf git://
+```
+
 * 이제 Test를 통해 각 개발 단계(functional, compilation, deployment)에서 코드가 정상적으로 작동하는지 테스트해야 합니다.
-* [실전 DApp 첫번째 : Test 붙이기](DApp_7_test.md) 를 참고해주세요.
+* [실전 DApp 첫번째(2) : Test 붙이기](DApp_7_test.md) 를 참고해주세요.

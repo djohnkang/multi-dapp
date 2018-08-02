@@ -9,7 +9,7 @@ Mocha test framework를 활용한 TDD
 ## Contract Test 방법
 1. Solidity를 통한 테스트
 
-2. Javascript를 통한 테스트
+2. **Javascript를 통한 테스트**
 
 ## Mocha 기초 functions
 
@@ -171,4 +171,4 @@ describe('Note', () => {
 
 * Test가 성공적을 끝나면 실제 배포를 해볼 차례입니다 !
 * `note\deploy.js` 를 생성하고 배포코드를 작성해봅시다.
-* [실전 DApp 첫번째 : 네트워크에 배포하기](DApp_8_deploy.md) 를 참고해주세요.
+* [실전 DApp 첫번째(3) : 네트워크에 배포하기](DApp_8_deploy.md) 를 참고해주세요.
