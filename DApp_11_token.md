@@ -5,7 +5,7 @@
 
 - Zeppelin Solutions : a smart contract auditing service
 - 보안 이슈로 인해 token 발행의 경우 이미 검증된 라이브러리를 활용하는 것이 좋음
-- `openzeppelin-solidity`를 활용하여 토큰 발행
+- `zeppelin-solidity`를 활용하여 토큰 발행
 
 ## 목차
 1. 프론트엔드 어플리케이션 `unbox`
@@ -28,17 +28,17 @@ cd mytoken
 
 truffle unbox tutorialtoken
 
-npm install --save openzeppelin-solidity
+npm install --save zeppelin-solidity
 ```
 
 ### 2. TutorialToken 스마트 컨트랙 작성
 #### 컨트랙 작성
 - `TutorialToken.sol` 작성
 ```
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.24;
 
 // 경고 뜨지만 괜찮음.
-import "openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
+import 'zeppelin-solidity/contracts/token/ERC20/MintableToken.sol';
 
 contract TutorialToken is StandardToken {
 
@@ -53,14 +53,6 @@ contract TutorialToken is StandardToken {
   }
 }
 ```
-- `Migrations.sol` 수정
-```
-//생성자 함수 변경
-constructor() public {
-     owner = msg.sender;
- }
-```
-
 
 ### 3. `truffle`로 Compile & Deploy
 
