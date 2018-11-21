@@ -32,13 +32,13 @@ package.json
 `solc` 솔리디티 컴파일러 설치
 
 ```shell
-note> npm install --save solc
+note> npm install --save solc@0.4.24
 ```
 
 ### 3. `note\contracts\` 에 `Note.sol` 을 생성후 편집
 
 ```solidity
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.24;
 
 contract Note {
 
